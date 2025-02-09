@@ -27,7 +27,6 @@ const Navbar = (): JSX.Element => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <NavLink href="/">Home</NavLink>
               <NavLink href="/about">About</NavLink>
               <div className="relative group">
                 <NavLink href="/services" className="flex items-center">

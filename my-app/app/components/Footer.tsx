@@ -7,8 +7,8 @@ const Footer = (): JSX.Element => {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div>
-            <h3 className="text-2xl font-bold">Milele Salon</h3>
-            <p className="mt-2">Your one-stop shop for beauty and wellness</p>
+            <h3 className="text-2xl font-bold">Milele Hair and Beauty Salon</h3>
+            <p className="mt-2">Milele is the best forget the rest</p>
           </div>
           <div className="flex space-x-6">
             <Link href="#" className="text-brown-100 hover:text-white">

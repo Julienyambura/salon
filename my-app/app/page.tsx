@@ -1,8 +1,7 @@
-import Image from "next/image";
-import About from "./about/page";
+import AboutPage from "./about/page";
 
 export default function Home(): JSX.Element {
   {
-    return <About />;
+    return <AboutPage />;
   }
 }

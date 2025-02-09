@@ -76,16 +76,16 @@ export default function Contact() {
           <div className="space-y-4">
             <div className="flex items-center">
               <Phone className="h-6 w-6 text-maroon-700 mr-4" />
-              <span className="text-maroon-800">+1 (555) 123-4567</span>
+              <span className="text-maroon-800">0722426904</span>
             </div>
             <div className="flex items-center">
               <Mail className="h-6 w-6 text-maroon-700 mr-4" />
-              <span className="text-maroon-800">info@milelesalon.com</span>
+              <span className="text-maroon-800">milelebeauty@gmail.com</span>
             </div>
             <div className="flex items-center">
               <MapPin className="h-6 w-6 text-maroon-700 mr-4" />
               <span className="text-maroon-800">
-                123 Beauty Street, Wellness City, ST 12345
+                2nd floor Odyssey plaza Mkomo Road South B
               </span>
             </div>
           </div>
@@ -94,9 +94,9 @@ export default function Contact() {
               Opening Hours
             </h3>
             <ul className="space-y-2 text-maroon-800">
-              <li>Monday - Friday: 9:00 AM - 8:00 PM</li>
-              <li>Saturday: 10:00 AM - 6:00 PM</li>
-              <li>Sunday: Closed</li>
+              <li>Monday - Friday: 7:00 AM - 8:00 PM</li>
+              <li>Saturday: 8:00 AM - 6:00 PM</li>
+              <li>Sun:8:00 AM - 6:00 PM</li>
             </ul>
           </div>
         </motion.div>
