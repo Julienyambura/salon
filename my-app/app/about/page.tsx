@@ -15,20 +15,20 @@ export default function About(): JSX.Element {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-4xl font-extrabold text-maroon-900 mb-8">
+        <h1 className="text-5xl font-extrabold text-purple-600 mb-8">
           About Milele
         </h1>
         <div className="flex flex-col md:flex-row items-center mb-12">
           <div className="md:w-1/2 md:pr-8">
-            <p className="  text-2xl text-maroon-900">
-              Milele is more than just a salon - a sanctuary for self-care and
-              rejuvenation. Founded with a passion for holistic beauty and
+            <p className="text-2xl text-purple-600">
+              Milele is more than just a salon – it's a sanctuary for self-care
+              and rejuvenation. Founded with a passion for holistic beauty and
               wellness, we offer a wide range of services designed to nurture
               your body, mind, and spirit.
             </p>
             <button
               onClick={() => setShowMore(!showMore)}
-              className="bg-maroon-700 text-brown-100 px-4 py-2 rounded-md hover:bg-maroon-800 transition-colors duration-300"
+              className="bg-purple-500 text-white px-6 py-3 rounded-md hover:bg-purple-600 transition-colors duration-300 mt-4"
             >
               {showMore ? "Read Less" : "Read More"}
             </button>
@@ -39,11 +39,12 @@ export default function About(): JSX.Element {
               alt="Milele Salon Interior"
               width={600}
               height={400}
-              className="rounded-lg shadow-md"
+              className="rounded-lg shadow-lg"
             />
           </div>
         </div>
       </motion.div>
+
       {showMore && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}
@@ -52,12 +53,12 @@ export default function About(): JSX.Element {
           transition={{ duration: 0.5 }}
           className="mt-8"
         >
-          <h2 className="text-4xl font-bold text-maroon-900 mb-4">
+          <h2 className="text-4xl font-bold text-purple-500 mb-4">
             Our Philosophy
           </h2>
           <div className="flex flex-col md:flex-row items-center mb-12">
             <div className="md:w-1/2 md:pr-8">
-              <p className="  text-2xl text-maroon-900">
+              <p className="text-xl text-purple-600">
                 At Milele, we believe that true beauty comes from within. Our
                 approach combines traditional techniques with modern
                 innovations, always prioritizing the use of natural,
@@ -72,14 +73,15 @@ export default function About(): JSX.Element {
                 alt="Milele Salon Philosophy"
                 width={600}
                 height={400}
-                className="rounded-lg shadow-md"
+                className="rounded-lg shadow-lg"
               />
             </div>
           </div>
-          <h2 className="text-4xl font-bold text-maroon-900 mb-4">Our Team</h2>
+
+          <h2 className="text-4xl font-bold text-purple-500 mb-4">Our Team</h2>
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 md:pr-8">
-              <p className="  text-2xl text-maroon-900">
+              <p className="text-xl text-purple-600">
                 Our team of skilled professionals is the heart of Milele. Each
                 member is carefully selected for their expertise, creativity,
                 and dedication to customer satisfaction. We invest in ongoing
@@ -93,19 +95,20 @@ export default function About(): JSX.Element {
                 alt="Milele Salon Team"
                 width={600}
                 height={400}
-                className="rounded-lg shadow-md"
+                className="rounded-lg shadow-lg"
               />
             </div>
           </div>
         </motion.div>
       )}
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
         className="mt-16"
       >
-        <h2 className="text-4xl font-bold text-maroon-900 mb-8 text-center">
+        <h2 className="text-4xl font-bold text-purple-500 mb-8 text-center">
           Frequently Asked Questions
         </h2>
         <div className="space-y-6">
@@ -137,12 +140,12 @@ export default function About(): JSX.Element {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg rounded-lg p-6"
+                className="bg-white rounded-lg p-6 shadow-lg"
               >
-                <h3 className="text-xl font-bold text-maroon-900 mb-2">
+                <h3 className="text-2xl font-bold text-purple-600 mb-2">
                   {faq.question}
                 </h3>
-                <p className="text-black">{faq.answer}</p>
+                <p className="text-purple-700 text-lg">{faq.answer}</p>
               </motion.div>
             );
           })}

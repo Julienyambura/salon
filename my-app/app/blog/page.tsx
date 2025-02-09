@@ -20,12 +20,11 @@ const blogPosts: BlogPosts = {
     image: "/images/image1.jpeg",
     excerpt: `
 Grooming is an essential part of every man's daily routine. At Milele, we believe that looking good leads to feeling good. Here are our top grooming tips for men:</p>
-
-
 `,
     slug: "mens-grooming-tips",
   },
 };
+
 export default function Blog(): JSX.Element {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -33,7 +32,7 @@ export default function Blog(): JSX.Element {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl font-extrabold text-maroon-900 mb-12 text-center"
+        className="text-4xl font-extrabold text-purple-800 mb-12 text-center"
       >
         Milele Blog
       </motion.h1>
@@ -46,7 +45,7 @@ export default function Blog(): JSX.Element {
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
             <Link href={`/blog/${slug}`} className="block">
-              <div className="bg-brown-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
                 <Image
                   src={post.image}
                   alt={post.title}
@@ -55,10 +54,12 @@ export default function Blog(): JSX.Element {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
-                  <h2 className="text-xl font-bold text-maroon-900 mb-2">
+                  <h2 className="text-2xl font-bold text-purple-800 mb-2 hover:text-purple-600 transition-colors duration-300">
                     {post.title}
                   </h2>
-                  <p className="text-blue-800">{post.excerpt}</p>
+                  <p className="text-gray-700 text-sm line-clamp-3">
+                    {post.excerpt}
+                  </p>
                 </div>
               </div>
             </Link>

@@ -26,48 +26,75 @@ export default function BookAppointment(): JSX.Element {
     service: "",
   });
 
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+
   const handleChange = (e: {
     target: { name: string; value: string };
   }): void => {
     const { name, value } = e.target;
-    setFormData(
-      (prevState: {
-        name: string;
-        email: string;
-        phone: string;
-        date: string;
-        time: string;
-        service: string;
-      }): {
-        name: string;
-        email: string;
-        phone: string;
-        date: string;
-        time: string;
-        service: string;
-      } => ({
-        ...prevState,
-        [name]: value,
-      })
-    );
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (e: { preventDefault: () => void }): void => {
     e.preventDefault();
 
+    // Basic Validation
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.date ||
+      !formData.time ||
+      !formData.service
+    ) {
+      setErrorMessage("Please fill out all fields.");
+      setSuccessMessage("");
+      return;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+      setErrorMessage("Please enter a valid email address.");
+      setSuccessMessage("");
+      return;
+    }
+
+    if (!/^\d{10}$/.test(formData.phone)) {
+      setErrorMessage("Please enter a valid phone number.");
+      setSuccessMessage("");
+      return;
+    }
+
+    setSuccessMessage("Appointment booked successfully!");
+    setErrorMessage("");
     console.log(formData);
-    alert("Appointment booked successfully!");
   };
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl font-extrabold text-maroon-900 mb-8 text-center"
+        className="text-4xl font-extrabold text-purple-900 mb-8 text-center"
       >
         Book an Appointment
       </motion.h1>
+
+      {errorMessage && (
+        <div className="mb-4 text-red-600 bg-red-100 p-4 rounded-md">
+          {errorMessage}
+        </div>
+      )}
+      {successMessage && (
+        <div className="mb-4 text-green-600 bg-green-100 p-4 rounded-md">
+          {successMessage}
+        </div>
+      )}
+
       <motion.form
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -78,7 +105,7 @@ export default function BookAppointment(): JSX.Element {
         <div>
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-maroon-700"
+            className="block text-sm font-medium text-purple-700"
           >
             Name
           </label>
@@ -87,15 +114,16 @@ export default function BookAppointment(): JSX.Element {
             id="name"
             name="name"
             required
-            className="mt-1 block w-full border border-maroon-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-maroon-500 focus:border-maroon-500"
+            className="mt-1 block w-full border border-purple-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
             value={formData.name}
             onChange={handleChange}
           />
         </div>
+
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-maroon-700"
+            className="block text-sm font-medium text-purple-700"
           >
             Email
           </label>
@@ -104,15 +132,16 @@ export default function BookAppointment(): JSX.Element {
             id="email"
             name="email"
             required
-            className="mt-1 block w-full border border-maroon-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-maroon-500 focus:border-maroon-500"
+            className="mt-1 block w-full border border-purple-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
             value={formData.email}
             onChange={handleChange}
           />
         </div>
+
         <div>
           <label
             htmlFor="phone"
-            className="block text-sm font-medium text-maroon-700"
+            className="block text-sm font-medium text-purple-700"
           >
             Phone
           </label>
@@ -121,15 +150,16 @@ export default function BookAppointment(): JSX.Element {
             id="phone"
             name="phone"
             required
-            className="mt-1 block w-full border border-maroon-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-maroon-500 focus:border-maroon-500"
+            className="mt-1 block w-full border border-purple-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
             value={formData.phone}
             onChange={handleChange}
           />
         </div>
+
         <div>
           <label
             htmlFor="date"
-            className="block text-sm font-medium text-maroon-700"
+            className="block text-sm font-medium text-purple-700"
           >
             Date
           </label>
@@ -138,15 +168,16 @@ export default function BookAppointment(): JSX.Element {
             id="date"
             name="date"
             required
-            className="mt-1 block w-full border border-maroon-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-maroon-500 focus:border-maroon-500"
+            className="mt-1 block w-full border border-purple-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
             value={formData.date}
             onChange={handleChange}
           />
         </div>
+
         <div>
           <label
             htmlFor="time"
-            className="block text-sm font-medium text-maroon-700"
+            className="block text-sm font-medium text-purple-700"
           >
             Time
           </label>
@@ -155,15 +186,16 @@ export default function BookAppointment(): JSX.Element {
             id="time"
             name="time"
             required
-            className="mt-1 block w-full border border-maroon-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-maroon-500 focus:border-maroon-500"
+            className="mt-1 block w-full border border-purple-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
             value={formData.time}
             onChange={handleChange}
           />
         </div>
+
         <div>
           <label
             htmlFor="service"
-            className="block text-sm font-medium text-maroon-700"
+            className="block text-sm font-medium text-purple-700"
           >
             Service
           </label>
@@ -171,24 +203,23 @@ export default function BookAppointment(): JSX.Element {
             id="service"
             name="service"
             required
-            className="mt-1 block w-full border border-maroon-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-maroon-500 focus:border-maroon-500"
+            className="mt-1 block w-full border border-purple-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
             value={formData.service}
             onChange={handleChange}
           >
             <option value="">Select a service</option>
-            {services.map(
-              (service): JSX.Element => (
-                <option key={service} value={service}>
-                  {service}
-                </option>
-              )
-            )}
+            {services.map((service) => (
+              <option key={service} value={service}>
+                {service}
+              </option>
+            ))}
           </select>
         </div>
+
         <div>
           <button
             type="submit"
-            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-maroon-600 hover:bg-maroon-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-maroon-500"
+            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-400 hover:bg-purple-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
           >
             Book Appointment
           </button>

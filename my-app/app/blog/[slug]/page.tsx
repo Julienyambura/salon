@@ -11,9 +11,10 @@ interface BlogPost {
   content: string;
 }
 
-interface BlogPosts { 
+interface BlogPosts {
   [slug: string]: BlogPost;
 }
+
 export default function BlogPostPage() {
   const params = useParams();
   const slug = params.slug as string;
@@ -99,7 +100,7 @@ export default function BlogPostPage() {
   const post = blogPosts[slug as keyof typeof blogPosts];
 
   if (!post) {
-    return <div>Post not found</div>;
+    return <div className="text-center text-purple-700">Post not found</div>;
   }
 
   return (
@@ -108,7 +109,7 @@ export default function BlogPostPage() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl font-extrabold text-maroon-900 mb-8 text-center"
+        className="text-4xl font-extrabold text-purple-700 mb-8 text-center"
       >
         {post.title}
       </motion.h1>
@@ -125,7 +126,7 @@ export default function BlogPostPage() {
           className="w-full h-64 object-cover rounded-lg shadow-md mb-8"
         />
         <div
-          className="prose prose-lg prose-maroon"
+          className="prose prose-lg prose-purple"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </motion.div>

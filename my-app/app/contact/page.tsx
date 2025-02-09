@@ -10,7 +10,7 @@ export default function Contact() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl font-extrabold text-maroon-900 mb-12 text-center"
+        className="text-4xl font-extrabold text-purple-900 mb-12 text-center"
       >
         Contact Us
       </motion.h1>
@@ -20,46 +20,46 @@ export default function Contact() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-2xl font-bold text-maroon-900 mb-6">
+          <h2 className="text-2xl font-bold text-purple-900 mb-6">
             Get in Touch
           </h2>
           <form className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-maroon-800 mb-2">
+              <label htmlFor="name" className="block text-purple-800 mb-2">
                 Name
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                className="w-full px-3 py-2 border border-maroon-300 rounded-md focus:outline-none focus:ring-2 focus:ring-maroon-500"
+                className="w-full px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-maroon-800 mb-2">
+              <label htmlFor="email" className="block text-purple-800 mb-2">
                 Email
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
-                className="w-full px-3 py-2 border border-maroon-300 rounded-md focus:outline-none focus:ring-2 focus:ring-maroon-500"
+                className="w-full px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-maroon-800 mb-2">
+              <label htmlFor="message" className="block text-purple-800 mb-2">
                 Message
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows={4}
-                className="w-full px-3 py-2 border border-maroon-300 rounded-md focus:outline-none focus:ring-2 focus:ring-maroon-500"
+                className="w-full px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="bg-maroon-700 text-brown-100 px-6 py-3 rounded-md hover:bg-maroon-800 transition-colors duration-300"
+              className="bg-purple-700 text-brown-100 px-6 py-3 rounded-md hover:bg-purple-800 transition-colors duration-300"
             >
               Send Message
             </button>
@@ -70,33 +70,31 @@ export default function Contact() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-2xl font-bold text-maroon-900 mb-6">
+          <h2 className="text-2xl font-bold text-purple-900 mb-6">
             Contact Information
           </h2>
           <div className="space-y-4">
             <div className="flex items-center">
-              <Phone className="h-6 w-6 text-maroon-700 mr-4" />
-              <span className="text-maroon-800">0722426904</span>
+              <Phone className="h-6 w-6 text-purple-700 mr-4" />
+              <span className="text-purple-800">0722426904</span>
             </div>
             <div className="flex items-center">
-              <Mail className="h-6 w-6 text-maroon-700 mr-4" />
-              <span className="text-maroon-800">milelebeauty@gmail.com</span>
+              <Mail className="h-6 w-6 text-purple-700 mr-4" />
+              <span className="text-purple-800">milelebeauty@gmail.com</span>
             </div>
             <div className="flex items-center">
-              <MapPin className="h-6 w-6 text-maroon-700 mr-4" />
-              <span className="text-maroon-800">
+              <MapPin className="h-6 w-6 text-purple-700 mr-4" />
+              <span className="text-purple-800">
                 2nd floor Odyssey plaza Mkomo Road South B
               </span>
             </div>
           </div>
           <div className="mt-8">
-            <h3 className="text-xl font-bold text-maroon-900 mb-4">
+            <h3 className="text-xl font-bold text-purple-900 mb-4">
               Opening Hours
             </h3>
-            <ul className="space-y-2 text-maroon-800">
-              <li>Monday - Friday: 7:00 AM - 8:00 PM</li>
-              <li>Saturday: 8:00 AM - 6:00 PM</li>
-              <li>Sun:8:00 AM - 6:00 PM</li>
+            <ul className="space-y-2 text-purple-800">
+              <li>Monday - Sunday: 6:00 AM - 8:00 PM</li>
             </ul>
           </div>
         </motion.div>
