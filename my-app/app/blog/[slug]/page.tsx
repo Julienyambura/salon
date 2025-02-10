@@ -73,7 +73,7 @@ export default function BlogPostPage() {
     },
     "mens-grooming-tips": {
       title: "Men's Grooming Tips for a Polished Look",
-      image: "/blog-mens-grooming.jpg",
+      image: "/images/image12.jpeg",
       content: `
     <p>Grooming is an essential part of every man's daily routine. At Milele, we believe that looking good leads to feeling good. Here are our top grooming tips for men:</p>
 

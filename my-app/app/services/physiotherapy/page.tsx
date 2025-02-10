@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const physiotherapyServices = [
-  { name: "Joint Mobilization", image: "/physio-joint-mobilization.jpg" },
-  { name: "Muscle Strengthening", image: "/physio-muscle-strengthening.jpg" },
-  { name: "Posture Correction", image: "/physio-posture-correction.jpg" },
-  { name: "Sports Injury Rehabilitation", image: "/physio-sports-rehab.jpg" },
-  { name: "Castor Oil Massage", image: "/physio-castor-oil-massage.jpg" },
+  { name: "Joint Mobilization", image: "/images/image25.jpeg" },
+  { name: "Muscle Strengthening", image: "/images/image30.jpeg" },
+  { name: "Posture Correction", image: "/images/image27.jpeg" },
+  { name: "Sports Injury Rehabilitation", image: "/images/image28.jpeg" },
+  { name: "Castor Oil Massage", image: "/images/image29.jpeg" },
 ];
 
 export default function Physiotherapy() {

@@ -15,12 +15,12 @@ export default function About(): JSX.Element {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-5xl font-extrabold text-purple-600 mb-8">
+        <h1 className="text-5xl font-extrabold text-black mb-8">
           About Milele
         </h1>
         <div className="flex flex-col md:flex-row items-center mb-12">
           <div className="md:w-1/2 md:pr-8">
-            <p className="text-2xl text-purple-600">
+            <p className="text-2xl text-black">
               Milele is more than just a salon – it's a sanctuary for self-care
               and rejuvenation. Founded with a passion for holistic beauty and
               wellness, we offer a wide range of services designed to nurture
@@ -53,12 +53,10 @@ export default function About(): JSX.Element {
           transition={{ duration: 0.5 }}
           className="mt-8"
         >
-          <h2 className="text-4xl font-bold text-purple-500 mb-4">
-            Our Philosophy
-          </h2>
+          <h2 className="text-4xl font-bold text-black mb-4">Our Philosophy</h2>
           <div className="flex flex-col md:flex-row items-center mb-12">
             <div className="md:w-1/2 md:pr-8">
-              <p className="text-xl text-purple-600">
+              <p className="text-xl text-black">
                 At Milele, we believe that true beauty comes from within. Our
                 approach combines traditional techniques with modern
                 innovations, always prioritizing the use of natural,
@@ -69,7 +67,7 @@ export default function About(): JSX.Element {
             </div>
             <div className="md:w-1/2 mt-8 md:mt-0">
               <Image
-                src="/milele-philosophy.jpg"
+                src="/images/image29.jpeg"
                 alt="Milele Salon Philosophy"
                 width={600}
                 height={400}
@@ -78,10 +76,10 @@ export default function About(): JSX.Element {
             </div>
           </div>
 
-          <h2 className="text-4xl font-bold text-purple-500 mb-4">Our Team</h2>
+          <h2 className="text-4xl font-bold text-black mb-4">Our Team</h2>
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 md:pr-8">
-              <p className="text-xl text-purple-600">
+              <p className="text-xl text-black">
                 Our team of skilled professionals is the heart of Milele. Each
                 member is carefully selected for their expertise, creativity,
                 and dedication to customer satisfaction. We invest in ongoing
@@ -91,7 +89,7 @@ export default function About(): JSX.Element {
             </div>
             <div className="md:w-1/2 mt-8 md:mt-0">
               <Image
-                src="/milele-team.jpg"
+                src="/images/image31.jpeg"
                 alt="Milele Salon Team"
                 width={600}
                 height={400}
@@ -108,7 +106,7 @@ export default function About(): JSX.Element {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="mt-16"
       >
-        <h2 className="text-4xl font-bold text-purple-500 mb-8 text-center">
+        <h2 className="text-4xl font-bold text-black mb-8 text-center">
           Frequently Asked Questions
         </h2>
         <div className="space-y-6">
@@ -142,7 +140,7 @@ export default function About(): JSX.Element {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-lg p-6 shadow-lg"
               >
-                <h3 className="text-2xl font-bold text-purple-600 mb-2">
+                <h3 className="text-2xl font-bold text-black mb-2">
                   {faq.question}
                 </h3>
                 <p className="text-purple-700 text-lg">{faq.answer}</p>

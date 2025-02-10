@@ -59,7 +59,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="bg-purple-700 text-brown-100 px-6 py-3 rounded-md hover:bg-purple-800 transition-colors duration-300"
+              className="bg-purple-300 text-brown-100 px-6 py-3 rounded-md hover:bg-purple-400 transition-colors duration-300"
             >
               Send Message
             </button>

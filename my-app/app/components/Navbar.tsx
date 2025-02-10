@@ -12,8 +12,12 @@ const Navbar = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
 
+  const closeSubmenu = () => {
+    setIsSubmenuOpen(false); // Close the submenu after selecting a service
+  };
+
   return (
-    <nav className="bg-purple-400 text-brown-100">
+    <nav className="bg-purple-600 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -25,11 +29,13 @@ const Navbar = (): JSX.Element => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-6">
-              <NavLink href="/about">About</NavLink>
+              <NavLink href="/about" className="text-white">
+                About
+              </NavLink>
               <div className="relative group">
                 <NavLink
                   href="/services"
-                  className="flex items-center"
+                  className="flex items-center text-white"
                   onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
                 >
                   Services
@@ -50,33 +56,41 @@ const Navbar = (): JSX.Element => {
                   >
                     <NavLink
                       href="/services/salon"
-                      className="block px-4 py-2 hover:bg-purple-200"
+                      className="block px-4 py-2 text-white hover:bg-purple-200"
+                      onClick={closeSubmenu}
                     >
                       Salon
                     </NavLink>
                     <NavLink
                       href="/services/barbershop"
-                      className="block px-4 py-2 hover:bg-purple-200"
+                      className="block px-4 py-2 text-white hover:bg-purple-200"
+                      onClick={closeSubmenu}
                     >
                       Barbershop
                     </NavLink>
                     <NavLink
                       href="/services/spa"
-                      className="block px-4 py-2 hover:bg-purple-200"
+                      className="block px-4 py-2 text-white hover:bg-purple-200"
+                      onClick={closeSubmenu}
                     >
                       Spa
                     </NavLink>
                     <NavLink
                       href="/services/physiotherapy"
-                      className="block px-4 py-2 hover:bg-purple-200"
+                      className="block px-4 py-2 text-white hover:bg-purple-200"
+                      onClick={closeSubmenu}
                     >
                       Physiotherapy
                     </NavLink>
                   </motion.div>
                 )}
               </div>
-              <NavLink href="/blog">Blog</NavLink>
-              <NavLink href="/contact">Contact Us</NavLink>
+              <NavLink href="/blog" className="text-white">
+                Blog
+              </NavLink>
+              <NavLink href="/contact" className="text-white">
+                Contact Us
+              </NavLink>
             </div>
           </div>
           <div className="hidden md:block">
@@ -138,31 +152,39 @@ const Navbar = (): JSX.Element => {
           className="md:hidden"
         >
           <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3">
-            <NavLink href="/" mobile>
+            <NavLink href="/" mobile className="text-white">
               Home
             </NavLink>
-            <NavLink href="/about" mobile>
+            <NavLink href="/about" mobile className="text-white">
               About
             </NavLink>
-            <NavLink href="/services" mobile>
+            <NavLink href="/services" mobile className="text-white">
               Services
             </NavLink>
-            <NavLink href="/services/salon" mobile className="pl-6">
+            <NavLink href="/services/salon" mobile className="pl-6 text-white">
               - Salon
             </NavLink>
-            <NavLink href="/services/barbershop" mobile className="pl-6">
+            <NavLink
+              href="/services/barbershop"
+              mobile
+              className="pl-6 text-white"
+            >
               - Barbershop
             </NavLink>
-            <NavLink href="/services/spa" mobile className="pl-6">
+            <NavLink href="/services/spa" mobile className="pl-6 text-white">
               - Spa
             </NavLink>
-            <NavLink href="/services/physiotherapy" mobile className="pl-6">
+            <NavLink
+              href="/services/physiotherapy"
+              mobile
+              className="pl-6 text-white"
+            >
               - Physiotherapy
             </NavLink>
-            <NavLink href="/blog" mobile>
+            <NavLink href="/blog" mobile className="text-white">
               Blog
             </NavLink>
-            <NavLink href="/contact" mobile>
+            <NavLink href="/contact" mobile className="text-white">
               Contact Us
             </NavLink>
             <NavLink

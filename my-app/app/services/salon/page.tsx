@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const salonServices = [
-  { name: "Hair and Scalp Treatment", image: "/salon-hair-treatment.jpg" },
-  { name: "Color and Highlights", image: "/salon-color-highlights.jpg" },
-  { name: "Relaxers", image: "/salon-relaxers.jpg" },
-  { name: "Dreadlocks", image: "/salon-dreadlocks.jpg" },
-  { name: "Faux Locs", image: "/salon-faux-locs.jpg" },
-  { name: "Sista Locks", image: "/salon-sista-locks.jpg" },
-  { name: "Haircuts", image: "/salon-haircuts.jpg" },
-  { name: "Weaving", image: "/salon-weaving.jpg" },
-  { name: "Pedicure and Manicure", image: "/salon-pedi-mani.jpg" },
+  { name: "Hair and Scalp Treatment", image: "/images/image23.jpeg" },
+  { name: "Color and Highlights", image: "/images/image22.jpeg" },
+  { name: "Relaxers", image: "/images/image21.jpeg" },
+  { name: "Dreadlocks", image: "/images/image20.jpeg" },
+  { name: "Faux Locs", image: "/images/image19.jpeg" },
+  { name: "Sista Locks", image: "/images/image18.jpeg" },
+  { name: "Haircuts", image: "/images/image17.jpeg" },
+  { name: "Weaving", image: "/images/image16.jpeg" },
+  { name: "Pedicure and Manicure", image: "/images/image15.jpeg" },
 ];
 
 export default function Salon() {

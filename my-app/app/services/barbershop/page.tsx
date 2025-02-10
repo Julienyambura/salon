@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const barbershopServices = [
-  { name: "Hair and Scalp Treatment", image: "/barbershop-hair-treatment.jpg" },
-  { name: "Haircuts", image: "/images/image2.jpeg" }, // Make sure this path is correct
+  { name: "Hair and Scalp Treatment", image: "/images/image14.jpeg" },
+  { name: "Haircuts", image: "/images/image2.jpeg" },
   {
     name: "Beard and Mustache Shaping",
-    image: "/barbershop-beard-shaping.jpg",
+    image: "/images/image12.jpeg",
   },
-  { name: "Scalp Scrub", image: "/barbershop-scalp-scrub.jpg" },
-  { name: "Face Scrub", image: "/barbershop-face-scrub.jpg" },
-  { name: "Dreadlocks", image: "/barbershop-dreadlocks.jpg" },
+  { name: "Scalp Scrub", image: "/images/image13.jpeg" },
+  { name: "Face Scrub", image: "/images/image11.jpeg" },
+  { name: "Dreadlocks", image: "/images/image7.jpeg" },
 ];
 
 export default function Barbershop() {
@@ -36,7 +36,7 @@ export default function Barbershop() {
           >
             <Image
               src={service.image}
-              alt="Haircuts"
+              alt="service"
               width={400}
               height={300}
               className="w-full h-48 object-cover"

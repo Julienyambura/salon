@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const spaServices = [
-  { name: "Massage", image: "/spa-massage.jpg" },
-  { name: "Moroccan Bath", image: "/spa-moroccan-bath.jpg" },
-  { name: "Body Scrubs", image: "/spa-body-scrubs.jpg" },
-  { name: "Body Wraps", image: "/spa-body-wraps.jpg" },
-  { name: "Body Mask", image: "/spa-body-mask.jpg" },
-  { name: "Facials", image: "/spa-facials.jpg" },
+  { name: "Massage", image: "/images/image3.jpeg" },
+  { name: "Moroccan Bath", image: "/images/image9.jpeg" },
+  { name: "Body Scrubs", image: "/images/image4.jpeg" },
+  { name: "Body Wraps", image: "/images/image10.jpeg" },
+  { name: "Body Mask", image: "/images/image6.jpeg" },
+  { name: "Facials", image: "/images/image8.jpeg" },
 ];
 
 export default function Spa() {
@@ -33,7 +33,7 @@ export default function Spa() {
             className="bg-purple-100 rounded-lg shadow-md overflow-hidden"
           >
             <Image
-              src={service.image || "/placeholder.svg"}
+              src={service.image}
               alt={service.name}
               width={400}
               height={300}
