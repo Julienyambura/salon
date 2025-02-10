@@ -94,7 +94,7 @@ export default function Contact() {
               Opening Hours
             </h3>
             <ul className="space-y-2 text-purple-800">
-              <li>Everyday</li>
+              <li>Everyday from 5am to 9pm</li>
             </ul>
           </div>
         </motion.div>
