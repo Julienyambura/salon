@@ -10,11 +10,6 @@ const pinyonScript = Pinyon_Script({ weight: "400", subsets: ["latin"] });
 
 const Navbar = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
-
-  const closeSubmenu = () => {
-    setIsSubmenuOpen(false); // Close the submenu after selecting a service
-  };
 
   return (
     <nav className="bg-purple-600 text-white">
@@ -32,59 +27,9 @@ const Navbar = (): JSX.Element => {
               <NavLink href="/about" className="text-white">
                 About
               </NavLink>
-              <div className="relative group">
-                <NavLink
-                  href="/services"
-                  className="flex items-center text-white"
-                  onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
-                >
-                  Services
-                  <motion.div
-                    animate={{ rotate: isSubmenuOpen ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="ml-1"
-                  >
-                    <ChevronDown className="h-5 w-5" />
-                  </motion.div>
-                </NavLink>
-                {isSubmenuOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute left-0 mt-2 w-48 bg-purple-300 rounded-md shadow-lg"
-                  >
-                    <NavLink
-                      href="/services/salon"
-                      className="block px-4 py-2 text-white hover:bg-purple-200"
-                      onClick={closeSubmenu}
-                    >
-                      Salon
-                    </NavLink>
-                    <NavLink
-                      href="/services/barbershop"
-                      className="block px-4 py-2 text-white hover:bg-purple-200"
-                      onClick={closeSubmenu}
-                    >
-                      Barbershop
-                    </NavLink>
-                    <NavLink
-                      href="/services/spa"
-                      className="block px-4 py-2 text-white hover:bg-purple-200"
-                      onClick={closeSubmenu}
-                    >
-                      Spa
-                    </NavLink>
-                    <NavLink
-                      href="/services/physiotherapy"
-                      className="block px-4 py-2 text-white hover:bg-purple-200"
-                      onClick={closeSubmenu}
-                    >
-                      Physiotherapy
-                    </NavLink>
-                  </motion.div>
-                )}
-              </div>
+              <NavLink href="/services" className="text-white">
+                Services
+              </NavLink>
               <NavLink href="/blog" className="text-white">
                 Blog
               </NavLink>
@@ -160,26 +105,6 @@ const Navbar = (): JSX.Element => {
             </NavLink>
             <NavLink href="/services" mobile className="text-white">
               Services
-            </NavLink>
-            <NavLink href="/services/salon" mobile className="pl-6 text-white">
-              - Salon
-            </NavLink>
-            <NavLink
-              href="/services/barbershop"
-              mobile
-              className="pl-6 text-white"
-            >
-              - Barbershop
-            </NavLink>
-            <NavLink href="/services/spa" mobile className="pl-6 text-white">
-              - Spa
-            </NavLink>
-            <NavLink
-              href="/services/physiotherapy"
-              mobile
-              className="pl-6 text-white"
-            >
-              - Physiotherapy
             </NavLink>
             <NavLink href="/blog" mobile className="text-white">
               Blog
