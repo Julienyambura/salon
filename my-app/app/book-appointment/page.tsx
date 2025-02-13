@@ -16,6 +16,18 @@ const services = [
   "Makeup",
 ];
 
+const availableTimeSlots = [
+  "9:00 AM",
+  "10:00 AM",
+  "11:00 AM",
+  "12:00 PM",
+  "1:00 PM",
+  "2:00 PM",
+  "3:00 PM",
+  "4:00 PM",
+  "5:00pm",
+];
+
 export default function BookAppointment(): JSX.Element {
   const [formData, setFormData] = useState({
     name: "",
@@ -42,7 +54,6 @@ export default function BookAppointment(): JSX.Element {
   const handleSubmit = (e: { preventDefault: () => void }): void => {
     e.preventDefault();
 
-    // Basic Validation
     if (
       !formData.name ||
       !formData.email ||
@@ -70,6 +81,16 @@ export default function BookAppointment(): JSX.Element {
 
     setSuccessMessage("Appointment booked successfully!");
     setErrorMessage("");
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      date: "",
+      time: "",
+      service: "",
+    });
+
     console.log(formData);
   };
 
@@ -171,6 +192,7 @@ export default function BookAppointment(): JSX.Element {
             className="mt-1 block w-full border border-purple-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
             value={formData.date}
             onChange={handleChange}
+            min={new Date().toISOString().split("T")[0]}
           />
         </div>
 
@@ -181,15 +203,21 @@ export default function BookAppointment(): JSX.Element {
           >
             Time
           </label>
-          <input
-            type="time"
+          <select
             id="time"
             name="time"
             required
             className="mt-1 block w-full border border-purple-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-purple-500 focus:border-purple-500"
             value={formData.time}
             onChange={handleChange}
-          />
+          >
+            <option value="">Select a time slot</option>
+            {availableTimeSlots.map((slot) => (
+              <option key={slot} value={slot}>
+                {slot}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div>
